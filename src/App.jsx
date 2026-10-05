@@ -51,6 +51,12 @@ const [genre, setGenre] = useState("");
   setGenre("");
 };
 
+  const handleDelete = (id) => {
+    setMovies((currentMovies) =>
+      currentMovies.filter((movie) => movie.id !== id)
+    );
+  };
+
   return (
   <div className="container">
     <h1 className="title">My Movie List</h1>
@@ -79,7 +85,7 @@ const [genre, setGenre] = useState("");
       <button type="submit">Add Movie</button>
     </form>
 
-    <MovieList movies={movies} />
+    <MovieList movies={movies} onDelete={handleDelete} />
   </div>
 );
 }
