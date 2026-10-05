@@ -34,7 +34,22 @@ function App() {
 const [year, setYear] = useState("");
 const [genre, setGenre] = useState("");
 
-  <MovieList />
+  const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const newMovie = {
+    id: Date.now(),
+    title: title,
+    year: year,
+    genre: genre
+  };
+
+  setMovies([...movies, newMovie]);
+
+  setTitle("");
+  setYear("");
+  setGenre("");
+};
 
   return (
   <div className="container">
