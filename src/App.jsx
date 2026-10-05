@@ -34,8 +34,13 @@ function App() {
 const [year, setYear] = useState("");
 const [genre, setGenre] = useState("");
 
-  const handleSubmit = (e) => {
+ const handleSubmit = (e) => {
   e.preventDefault();
+
+  if (!title || !year || !genre) {
+    alert("Please fill in all fields.");
+    return;
+  }
 
   const newMovie = {
     id: Date.now(),
