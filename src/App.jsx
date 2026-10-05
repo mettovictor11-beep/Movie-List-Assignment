@@ -55,7 +55,7 @@ const [genre, setGenre] = useState("");
   <div className="container">
     <h1 className="title">My Movie List</h1>
 
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
   type="text"
   placeholder="Movie title"
