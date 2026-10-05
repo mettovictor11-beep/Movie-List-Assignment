@@ -30,13 +30,43 @@ function App() {
     }
   ]);
 
-  return (
-    <div className="container">
-      <h1 className="title">My Movie List</h1>
+  const [title, setTitle] = useState("");
+const [year, setYear] = useState("");
+const [genre, setGenre] = useState("");
 
-      <MovieList movies={movies} />
-    </div>
-  );
+  <MovieList />
+
+  return (
+  <div className="container">
+    <h1 className="title">My Movie List</h1>
+
+    <form>
+      <input
+  type="text"
+  placeholder="Movie title"
+  value={title}
+  onChange={(e) => setTitle(e.target.value)}
+/>
+
+<input
+  type="number"
+  placeholder="Year"
+  value={year}
+  onChange={(e) => setYear(e.target.value)}
+/>
+
+<input
+  type="text"
+  placeholder="Genre"
+  value={genre}
+  onChange={(e) => setGenre(e.target.value)}
+/>
+      <button type="submit">Add Movie</button>
+    </form>
+
+    <MovieList movies={movies} />
+  </div>
+);
 }
 
 export default App;
