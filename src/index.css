@@ -80,3 +80,9 @@ form button:hover {
 .movie-card button:hover {
   background-color: #c9302c;
 }
+.movie-count {
+  text-align: center;
+  margin-top: -20px;
+  margin-bottom: 25px;
+  color: #666;
+}

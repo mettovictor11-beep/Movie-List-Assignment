@@ -65,6 +65,9 @@ const [genre, setGenre] = useState("");
   return (
   <div className="container">
     <h1 className="title">My Movie List</h1>
+    <p className="movie-count">
+    Total Movies: {movies.length}
+    </p>
 
     <form onSubmit={handleSubmit}>
       <input
