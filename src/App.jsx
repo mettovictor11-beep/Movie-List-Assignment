@@ -2,10 +2,8 @@ import { useState } from "react";
 import MovieList from "./components/MovieList";
 import "./index.css";
 
-
 function App() {
-
-  const movies = [
+  const [movies, setMovies] = useState([
     {
       id: 1,
       title: "Inception",
@@ -30,15 +28,15 @@ function App() {
       year: 2014,
       genre: "Sci-Fi"
     }
-  ];
+  ]);
 
   return (
-  <div className="container">
-    <h1 className="title">My Movie List</h1>
+    <div className="container">
+      <h1 className="title">My Movie List</h1>
 
-    <MovieList movies={movies} />
-  </div>
-);
+      <MovieList movies={movies} />
+    </div>
+  );
 }
 
 export default App;
